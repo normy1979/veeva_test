@@ -35,6 +35,15 @@ class RecordSubjectDataTest:
         self.driver.switch_to.window(whandle2)
         
         site_number = self.driver.find_element(By.ID, "valSiteNum").text
+        subject_id = self.driver.find_element(By.ID, "txtScreen").text
+        sex = ""
+        rand_id = self.driver.find_element(By.ID, "valRandNum").text
+        previous_treatment = self.driver.find_element(By.ID, "lstStrata1").text
+        severity = self.driver.find_element(By.ID, "lstStrata2").text
+        cohort = self.driver.find_element(By.ID, "lstCohort").text
+        status = self.driver.find_element(By.ID, "lstLastActivity").text
+        status_date = self.driver.find_element(By.ID, "valActDate").text
+        next_event = self.driver.find_element(By.ID, "lblNextAct").text
         
         time.sleep(2)
                 
