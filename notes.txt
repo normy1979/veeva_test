@@ -1,0 +1,16 @@
+
++++++ Execute postgres in container +++++
+
+    # docker exec -it postgres bash
+
+    # psql -U veeva -W veeva
+    # pw: veeva
+
++++++ Run pytest with output +++++
+
+    # pytest -rP tests/test_veeva_rtsm.py
+
+
++++++ Run Flask +++++
+
+    # flask --app wsgi run

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<p>Home works!</p>
+<p><a href="/create">create</a></p>
+
+<div class="content">
+    {% for veeva_user in veeva_users %}
+        <div>
+            <p>{{ veeva_user.username }}</p>
+        </div>
+        <div>
+            <p>{{ veeva_user.rtsm_url }}</p>
+        </div>
+        <div>
+            <p>{{ veeva_user.password }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}	
