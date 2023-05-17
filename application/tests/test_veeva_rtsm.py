@@ -66,8 +66,9 @@ def test_login(setup_driver, app):
     
 def test_record_subject(setup_driver):     
     record_subject_test = RecordSubjectDataTest(pytest.driver)
-    record_subject_test.click()
+    site_number = record_subject_test.click()
     time.sleep(2)
+    assert site_number == "103"
     
 def test_home(client):
     response = client.get("/")
