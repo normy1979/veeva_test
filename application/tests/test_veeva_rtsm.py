@@ -5,6 +5,7 @@ from application.models.models import Veevainfo
 
 from selenium import webdriver
 from application.tests.LoginTest import LoginTest
+from application.tests.RecordSubjectDataTest import RecordSubjectDataTest
 
 import time
 
@@ -61,6 +62,11 @@ def test_login(setup_driver, app):
     login_test = LoginTest(pytest.driver, veeva_users[0].username, veeva_users[0].password)
     login_test.login()
     assert(pytest.driver.current_url == "https://rtsm-val.veeva.com/VEV-901/Subjects.aspx")
+    time.sleep(2)
+    
+def test_record_subject(setup_driver):     
+    record_subject_test = RecordSubjectDataTest(pytest.driver)
+    record_subject_test.click()
     time.sleep(2)
     
 def test_home(client):
