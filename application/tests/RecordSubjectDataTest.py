@@ -11,10 +11,10 @@ class RecordSubjectDataTest:
         element = WebDriverWait(self.driver, 20).until(
             EC.presence_of_element_located((By.ID, "grid"))
         )
-        href_value = "javascript:void AOP(&#39;/VEV-901/SubjectPop.aspx?__SubjectID=8d50de76-d251-486d-83c3-dff2d3211bec&#39;, 280, 250, &#39;no&#39;);"
-        anchor = self.driver.find_element(By.XPATH, "//a[@href='" + href_value + "']")
-        # anchor = self.driver.find_element(By.CLASS_NAME, "fa-gen menu")
-        print(anchor.text)
+        tr = self.driver.find_element(By.CLASS_NAME, "mygrid")
+        td = tr.find_element(By.TAG_NAME, "td")
+        anchor = td.find_element(By.TAG_NAME, "a")
+        print("Text: " + anchor.text)
         anchor.click()
                 
         print("[+] Record Subject Data Completed")
