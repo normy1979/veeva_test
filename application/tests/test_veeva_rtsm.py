@@ -7,6 +7,8 @@ from selenium import webdriver
 from application.tests.LoginTest import LoginTest
 from application.tests.RecordSubjectDataTest import RecordSubjectDataTest
 
+import pandas as pd
+
 import time
 
 @pytest.fixture(scope="module")

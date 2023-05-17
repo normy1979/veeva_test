@@ -18,4 +18,43 @@
         </div>
     {% endfor %}
 </div>
+
+<h4>Subject Info</h4>
+<div class="content">
+    {% for subject_info in subject_info %}
+        <div>
+            <p>{{ subject_info.subject_id }}</p>
+        </div>
+        <div>
+            <p>{{ subject_info.site_number }}</p>
+        </div>
+        <div>
+            <p>{{ subject_info.date_of_birth }}</p>
+        </div>
+        <div>
+            <p>{{ subject_info.sex }}</p>
+        </div>
+        <div>
+            <p>{{ subject_info.rand_id }}</p>
+        </div>
+        <div>
+            <p>{{ subject_info.previous_treatment }}</p>
+        </div>
+        <div>
+            <p>{{ subject_info.severity }}</p>
+        </div>
+        <div>
+            <p>{{ subject_info.cohort }}</p>
+        </div>
+        <div>
+            <p>{{ subject_info.status }}</p>
+        </div>
+        <div>
+            <p>{{ subject_info.status_date }}</p>
+        </div>
+        <div>
+            <p>{{ subject_info.next_event }}</p>
+        </div>
+    {% endfor %}
+</div>
 {% endblock %}	
